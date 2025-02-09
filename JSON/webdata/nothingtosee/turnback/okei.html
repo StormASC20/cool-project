@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon_io/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Loved+by+the+King&family=Macondo&family=Smooch+Sans:wght@100..900&display=swap"
+        rel="stylesheet">
+
+        <script type="module" src="confetti.js"></script>
+
+    <title>Will You Be My Valentine?</title>
+
+    <style>
+        body {
+            background-image: url(images/sky.jpg);
+            background-size: cover;
+        }
+
+        button{
+
+            font-size: 40px;
+            border-radius: 20px;
+            border-width: 2px;
+
+            /* border-color: #FF6F77; */
+            background-color: #FFDEE3;
+            color: #FF3334;
+
+            width: 200px;
+            height: auto;
+
+            margin: 0;
+        }
+
+        #mainDiv {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .center {
+            width: 50%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sideImages {
+            width: 20em;
+            height: auto;
+        }
+
+        .leftImgs,
+        .rightImgs {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .stardust {
+            width: 25em;
+            height: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="mainDiv">
+
+        <div class="leftImgs">
+            <img src="images/blush-anime.gif" class="sideImages" style="width: 100px; height: auto;" />
+
+            <img src="images/sailor.webp" class="sideImages" />
+            <!-- <img src="images/alpha1.jpg" class=""/> -->
+
+            <img src="images/yuji.gif" class="sideImages" />
+        </div>
+
+        <div class="center">
+            <button id="yeah-button">YEAH!!! >:3</button>
+        </div>
+
+        <div class="rightImgs">
+            <img src="images/stardust.gif" alt="valentines-card" class="sideImages stardust" />
+            <img src="images/alphaLonging.jpg" class="sideImages" />
+
+        </div>
+    </div>
+
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="bgm2.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+</body>
+
+<script>
+    let yeah = document.querySelector("#yeah-button");
+
+    yeah.addEventListener("click", () => {
+        document.querySelector("#backgroundMusic").play();
+    })
+</script>
+
+</html>
