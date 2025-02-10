@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Loved+by+the+King&family=Macondo&family=Smooch+Sans:wght@100..900&display=swap"
         rel="stylesheet">
 
-        <script type="module" src="confetti.js"></script>
+    <script type="module" src="confetti.js"></script>
 
     <title>Will You Be My Valentine?</title>
 
@@ -21,7 +21,7 @@
             background-size: cover;
         }
 
-        button{
+        button {
 
             font-size: 40px;
             border-radius: 20px;
@@ -47,8 +47,10 @@
             width: 50%;
             text-align: center;
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: center;
+            flex-direction: column;
+            
         }
 
         .sideImages {
@@ -62,11 +64,22 @@
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
+            flex: 1;
+            height: 90vh;
         }
 
         .stardust {
             width: 25em;
             height: auto;
+        }
+
+        .smallImg{
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: space-around;
+
+            width: 100%;
         }
     </style>
 
@@ -77,9 +90,16 @@
     <div id="mainDiv">
 
         <div class="leftImgs">
-            <img src="images/blush-anime.gif" class="sideImages" style="width: 100px; height: auto;" />
 
-            <img src="images/sailor.webp" class="sideImages" />
+            <div class="smallImg">
+                <img src="images/blush-anime.gif" class="sideImages" 
+                    style="width: 100px; height: auto;" />
+                <img src="images/abbott.gif" class="sideImages"
+                    style="width: 100px; height: auto;" />
+            </div>
+
+
+            <img src="images/legolas.gif" class="sideImages" />
             <!-- <img src="images/alpha1.jpg" class=""/> -->
 
             <img src="images/yuji.gif" class="sideImages" />
@@ -87,6 +107,8 @@
 
         <div class="center">
             <button id="yeah-button">YEAH!!! >:3</button>
+            <img src="images/sailor.webp" class="sideImages" />
+
         </div>
 
         <div class="rightImgs">
