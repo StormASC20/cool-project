@@ -50,6 +50,7 @@
 
         #yes-button,
         #no-button {
+            /* font-size: 20px; */
             border-radius: 20px;
             border-width: 2px;
 
@@ -122,15 +123,19 @@
         let yesButton = document.querySelector("#yes-button");
         let noButton = document.querySelector("#no-button");
 
-
         noButton.addEventListener("click", function () {
 
             let currentWidth = yesButton.offsetWidth;
             let currentHeight = yesButton.offsetHeight;
+            let currentFontSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
+            
             let music = document.querySelector("#backgroundMusic")
 
             yesButton.style.width = (currentWidth + 6) + "px";
             yesButton.style.height = (currentHeight + 3) + "px";
+            yesButton.style.fontSize = (currentFontSize + 2) + "px";
+
+            console.log(currentFontSize);
 
             music.play();
 
